@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Calculator (M8)</title>
+    <link rel="Stylesheet"
+    href="Documents/Github/Data Analysis Portfolio/Web-Skill-Showcase/Calculator/calculator.css">
+    </head>
+    
+    <body>
+        <h2>Calculator</h2>
+        <p></p>
+        <p class="js-display"></p>
+
+        <button class="shared-button" onclick="
+            updateCalculation('1')
+        ">1</button>
+                
+        <button class="shared-button" onclick ="
+            updateCalculation('2')
+        ">2</button>
+        
+        <button class="shared-button" onclick ="
+            updateCalculation('3')
+        ">3</button>
+
+        <button class="operators-button" onclick ="
+            updateCalculation('*')
+        ">*</button>
+
+        </p>
+
+        <p>
+        <button class="shared-button" onclick ="
+            updateCalculation('4')
+        ">4</button>
+
+        <button class="shared-button" onclick ="
+            updateCalculation('5')
+        ">5</button>
+
+        <button class="shared-button" onclick ="
+            updateCalculation('6')
+        ">6</button>
+
+        <button class="operators-button" onclick ="
+            updateCalculation('-')
+        ">-</button>
+
+        </p>
+
+       <p>
+        <button class="shared-button" onclick ="
+            updateCalculation('7')
+        ">7</button>
+
+        <button class="shared-button" onclick ="
+            updateCalculation('8')
+        ">8</button>
+
+        <button class="shared-button" onclick ="
+            updateCalculation('9')
+        ">9</button>
+
+        <button class="operators-button" onclick ="
+            updateCalculation('+')
+        ">+</button>
+        </p>
+
+
+        <p>
+        
+        <button class="shared-button" onclick ="
+            updateCalculation('.')
+        ">.</button>
+        
+
+        <button class="shared-button" onclick ="
+            updateCalculation('0')
+        ">0</button>
+
+        <button class="operators-button" onclick ="
+            calculation = eval(calculation);
+            displayResult();
+        ">=</button>
+
+        <button class="operators-button" onclick="
+            updateCalculation(' / ');
+        ">/</button>
+        <p>
+            <button class="shared-button clear" onclick="
+                calculation = '';
+                displayResult();
+                localStorage.setItem('calculation', calculation);
+                // console.log(calculation);
+                //console.log('Calculator Reset.', calculation)
+                ">clear</button>
+        </p>
+
+        <script src="Documents/Github/Data Analysis Portfolio/Web-Skill-Showcase/Calculator/calculator.js"></script> 
+    </body>
+</html>
