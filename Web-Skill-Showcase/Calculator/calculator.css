@@ -1,0 +1,46 @@
+    
+    .js-display{
+        color: white;
+        font-family: Arial;
+        margin-top: 6px;
+        margin-bottom: 5px;
+    }
+
+    body{
+        color:white;
+        background-color: black;
+        font-family: Arial;
+    }
+
+    .shared-button{
+        background-color:rgb(51, 51, 51);
+        border-radius: 60px;
+        border: none;
+        padding: 8px;
+        color: white;
+        height: 30px;
+        width: 30px;
+        font-size: 10px;
+        cursor: pointer;
+        margin-right: 3px;
+        
+    }
+
+    .operators-button{
+        background-color: rgb(254, 160, 10);
+        border: none;
+        border-radius: 60px;
+        padding: 8px;
+        font-size: 10px;
+        color: white;
+        height: 30px;
+        width: 30px;
+        cursor: pointer;
+        margin-right: 3px;
+    }
+
+    .clear{
+        background-color: rgb(51,51,51);
+        font-size: 8px;
+        
+    }
