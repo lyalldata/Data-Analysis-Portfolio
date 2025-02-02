@@ -26,6 +26,88 @@ let score;
       }
       */
 
+      let isAutoPlaying = false;
+      let intervalID;
+
+      function autoplay (){
+        if (!isAutoPlaying){
+          intervaalID =setInterval(()=>{
+            const playerMove = pickComputerMove();
+            playGame(playerMove);
+          },1000);
+          isAutoPlaying = true;
+
+          const element = document.querySelector('.js-autoplay-button');
+            if(element.innerHTML ==='Auto Play'){
+              element.innerHTML = 'Stop Playing'
+            }
+        } else {
+          clearInterval(intervalID);
+          isAutoPlaying = false;
+
+          const element = document.querySelector('.js-autoplay-button');
+          if(element.innerHTML === 'Stop Playing'){
+            element.innerHTML = 'Auto Play';
+          }
+        }
+      }
+
+      //Event Listeners for buttons
+      document.querySelector('.js-rock-button').addEventListener('click', () => {playGame('rock');});
+
+      document.querySelector('.js-paper-button').addEventListener('click', () => {playGame('paper');});
+
+      document.querySelector('.js-scissors-button').addEventListener('click', () => {playGame('scissors');});
+
+      document.querySelector('.js-reset-button').addEventListener('click', () => {resetScoreYN();});
+
+      document.querySelector('.js-autoplay-button').addEventListener('click', () => {autoplay();});   
+
+      function resetScoreYN(){
+        const messageElement = document.querySelector('js.question');
+        messageElement.innerHTML = `
+        Are yous sure you want to reset your score?
+        <button onclick="resetScore()">Yes</button>
+        <button onclick="hideResetQ()">No</button>
+        `;
+        document.body.addEventListener('keydown', (event) => {
+          if (event.key ==='y'){resetScore();}
+          else if (event.key === 'n'){hideResetQ();}
+        });
+      }
+
+      //keydowns
+
+    document.body.addEventListener('keydown', (event) => {
+      if(event.key === 'r'){
+        playGame('rock');
+      }else if (event.key === 'p'){
+        playGame('paper');
+      }else if (event.key === 's'){
+        playGame('scissors');
+      }else if (event.key === 'a'){
+        autoplay();
+      }else if (event.key === 'Backspace'){
+        resetScoreYN();
+      }
+    });
+
+    const resetScore = ('keydown', (event) => {
+      score.wins = 0;
+      score.losses = 0;
+      score.ties = 0;
+      
+      localStorage.removeItem('score');
+      updateScoreElement();
+      hideResetQ()
+    });
+
+    const hideReesetQ = () => {
+      const messageElement = document.querySelector('js-question');
+      messageElement.innerHTML = '';
+    }
+
+
       function playGame(playerMove) {
         const computerMove = pickComputerMove();
 
