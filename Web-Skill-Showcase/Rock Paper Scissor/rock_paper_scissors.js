@@ -31,7 +31,7 @@ let score;
 
       function autoplay (){
         if (!isAutoPlaying){
-          intervaalID =setInterval(()=>{
+          intervalID =setInterval(()=>{
             const playerMove = pickComputerMove();
             playGame(playerMove);
           },1000);
@@ -64,35 +64,37 @@ let score;
       document.querySelector('.js-autoplay-button').addEventListener('click', () => {autoplay();});   
 
       function resetScoreYN(){
-        const messageElement = document.querySelector('js.question');
+        const messageElement = document.querySelector('.js-question');
         messageElement.innerHTML = `
         Are yous sure you want to reset your score?
         <button onclick="resetScore()">Yes</button>
         <button onclick="hideResetQ()">No</button>
         `;
         document.body.addEventListener('keydown', (event) => {
-          if (event.key ==='y'){resetScore();}
-          else if (event.key === 'n'){hideResetQ();}
+          if (event.key ==='y'){
+            resetScore();
+          }else if (event.key === 'n'){
+            hideResetQ();
+          }
         });
       }
 
       //keydowns
-
-    document.body.addEventListener('keydown', (event) => {
-      if(event.key === 'r'){
+      document.body.addEventListener('keydown', (event) => {
+      if (event.key === 'r') {
         playGame('rock');
-      }else if (event.key === 'p'){
+      } else if (event.key === 'p') {
         playGame('paper');
-      }else if (event.key === 's'){
+      } else if (event.key === 's') {
         playGame('scissors');
-      }else if (event.key === 'a'){
+      } else if (event.key === 'a') {
         autoplay();
-      }else if (event.key === 'Backspace'){
+      } else if (event.key === 'Escape') {
         resetScoreYN();
       }
     });
 
-    const resetScore = ('keydown', (event) => {
+    const resetScore = ('keydown', () => {
       score.wins = 0;
       score.losses = 0;
       score.ties = 0;
@@ -102,8 +104,8 @@ let score;
       hideResetQ()
     });
 
-    const hideReesetQ = () => {
-      const messageElement = document.querySelector('js-question');
+    const hideResetQ = () => {
+      const messageElement = document.querySelector('.js-question');
       messageElement.innerHTML = '';
     }
 
