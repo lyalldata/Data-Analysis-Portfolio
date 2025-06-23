@@ -1,5 +1,6 @@
 # 💫 About Me:
-👋 Greetings. I am Gurmeet, a Data Analyst with over 1.5 years of analytical experience gained through diverse project engagements. My work centers on the meticulous extraction of insights from complex datasets, translating them into actionable intelligence that informs strategic decisions and addresses real-world challenges. To ensure these data narratives are effectively communicated and accessible, I leverage a foundational command of HTML, CSS, and JavaScript for the development and display of intuitive web-based dashboards. My commitment lies in driving clarity and impact through data-driven solutions.Always eager to learn and collaborate on exciting projects! Feel free to reach out to me for any collaboration opportunities.
+👋 Greetings. I am Gurmeet, a Data Analyst with over 1.5 years of analytical experience gained through diverse project engagements. My work centers on the meticulous extraction of insights from complex datasets, translating them into actionable intelligence that informs strategic decisions and addresses real-world challenges. To ensure these data narratives are effectively communicated and accessible, I leverage a foundational command of HTML, CSS, and JavaScript for the development and display of intuitive web-based dashboards. My commitment lies in driving clarity and impact through data-driven solutions.
+Always eager to learn and collaborate on exciting projects! Feel free to reach out to me for any collaboration opportunities.
 
 
 ## 🌐 Socials:
